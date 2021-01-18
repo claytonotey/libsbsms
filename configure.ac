@@ -91,8 +91,6 @@ if test x$enable_multithreaded = xyes; then
     AC_DEFINE(MULTITHREADED,1,[Define to compile multithreaded sbsms])
 fi
 
-echo "${ax_cv_cxx_compiler_vendor} XXX"
-
 if test x$enable_sse = xyes; then
 
    if test "${ax_cv_cxx_compiler_vendor}" = "gnu"; then
