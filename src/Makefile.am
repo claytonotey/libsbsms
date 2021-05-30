@@ -4,6 +4,7 @@ libsbsmsincludedir = $(includedir)
 libsbsmsinclude_HEADERS = ../include/sbsms.h
 
 lib_LTLIBRARIES = libsbsms.la
+libsbsms_la_LDFLAGS = -no-undefined
 libsbsms_la_SOURCES = \
 	sms.cpp \
 	track.cpp \
