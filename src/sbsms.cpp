@@ -1,4 +1,3 @@
-#include "config.h"
 #include "sbsms.h"
 #include "real.h"
 #include "subband.h"

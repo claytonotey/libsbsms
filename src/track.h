@@ -3,7 +3,6 @@
 #define TRACK_H
 
 #include "trackpoint.h"
-#include "config.h"
 
 #ifdef MULTITHREADED
 #include "pthread.h"

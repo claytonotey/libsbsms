@@ -3,7 +3,6 @@
 #define UTILS_H
 
 #include "real.h"
-#include "config.h"
 #include "sbsms.h"
 
 namespace _sbsms_ {
