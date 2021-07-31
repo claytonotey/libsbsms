@@ -47,7 +47,9 @@
 **		long int lrint  (double x) ;
 */
 
+#ifndef CMAKE
 #include "config.h"
+#endif
 #include "sbsms.h"
 
 /*
