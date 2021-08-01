@@ -2,7 +2,6 @@
 #ifndef SMS_H
 #define SMS_H
 
-#include "config.h"
 #ifdef MULTITHREADED
 #include "pthread.h"
 #endif

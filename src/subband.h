@@ -6,7 +6,6 @@
 #include "buffer.h"
 #include "sms.h"
 #include <stdio.h>
-#include "config.h"
 #ifdef MULTITHREADED
 #include "pthread.h"
 #endif
