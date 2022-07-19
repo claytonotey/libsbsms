@@ -87,6 +87,7 @@ class SMS {
   float interp2(int k, int ko1, float kf);
   float findExtremum(float *mag, float *mag2, int k, float *y);
   void calcmags(float *mag, audio *x);
+  void calcmagsStereo(float *mag, audio *x);
   int findCut(float *dmag, int k, int maxK);
   Track *createTrack(int c, TrackPoint *tp, const TimeType &time, bool bStitch);
   void returnTrackIndex(int c, Track *t);
