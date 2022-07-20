@@ -61,15 +61,13 @@ list( APPEND OPTIONS
 
 target_compile_options( sbsmsx PRIVATE ${OPTIONS} )
 target_include_directories( sbsmsx PRIVATE ../include )
-#target_link_options( sbsmsx PRIVATE "-L../" )
 add_subdirectory("../" ${CMAKE_CURRENT_BINARY_DIR}/libsbsms)
 target_link_libraries( sbsmsx PRIVATE sbsms ${MAD_LINK_LIBRARIES} ${SNDFILE_LINK_LIBRARIES} ${PORTAUDIO_LINK_LIBRARIES} )
 
 add_executable( sbsms-convert src/sbsms-convert.cpp )
-#add_executable( sbsms-convert src/blob.cpp )
 target_compile_options( sbsms-convert PRIVATE ${OPTIONS} )
 target_include_directories( sbsms-convert PRIVATE ../include )
-target_link_libraries( sbsms-convert sbsmsx )
+target_link_libraries( sbsms-convert sbsmsx pthreads)
 
 
 if( 0 ) # sbsms-play not included currently
