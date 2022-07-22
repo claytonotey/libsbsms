@@ -22,7 +22,20 @@ int main(int argc, char **argv)
 #endif
 
   if(argc<7) {
-    printf("usage: sbsms infile<.wav|.aif|.mp3|.sbsms> outfile<.wav|.aif|.sbsms> rate-start[0.01:100] rate-end[0.01:100] halfsteps-start[-48:48] halfsteps-end[-48:48]\n");
+    printf("Usage: sbsms-convert <src> <dst> <rate0> <rate1> <pitch0> <pitch1>\n"
+      "Reads src file and writes stretched copy to dst.\n\n"
+      "Arguments:\n"
+      "src:    input file          (.wav | .aif | .aiff | .mp3)\n"
+      "dst:    output file         (.wav | .aif | .aiff)\n"
+      "rate0:  initial tempo rate  [0.01 to 100]\n"
+      "rate1:  final tempo rate    [0.01 to 100]\n"
+      "pitch0: intial half-step pitch shift  [-48 to 48]\n"
+      "pitch1: final half-step pitch shift   [-48 to 48]\n\n"
+      "Examples:\n"
+      "Sliding stretch from half to double tempo, retaining original pitch:\n"
+      "   sbsms-convert infile.wav outfile.wav 0.5 2.0 0 0\n\n"
+      "Slow down from original speed to half speed, changing tempo and pitch:\n"
+      "   sbsms-convert infile.wav outfile.wav 1 0.5 0 -12\n");
     exit(-1);
   }
 
