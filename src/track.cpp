@@ -1,10 +1,10 @@
+#include <cmath>
+#include <algorithm>
 #include "track.h"
-#include "real.h"
 #include "dBTable.h"
 #include "synthTable.h"
 #include "utils.h"
 
-#include <algorithm>
 using namespace std;
 
 namespace _sbsms_ {

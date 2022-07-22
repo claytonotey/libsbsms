@@ -31,7 +31,7 @@ class LastFactor {
 public:
   enum { radix = Factor<N>::value,
          stride = N / radix,
-         value = (stride==1?radix:LastFactor<stride>::value) };
+         value = (stride==1 ? static_cast<int>(radix) : static_cast<int>(LastFactor<stride>::value)) };
 };
 
 template <>

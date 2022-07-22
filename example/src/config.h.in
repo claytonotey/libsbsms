@@ -20,12 +20,6 @@
 /* Define to 1 if you have the <inttypes.h> header file. */
 #cmakedefine HAVE_INTTYPES_H 1
 
-/* Define if you have C99's lrint function. */
-#cmakedefine HAVE_LRINT 1
-
-/* Define if you have C99's lrintf function. */
-#cmakedefine HAVE_LRINTF 1
-
 /* Define to 1 if you have the <memory.h> header file. */
 #cmakedefine HAVE_MEMORY_H 1
 

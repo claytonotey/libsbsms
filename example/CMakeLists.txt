@@ -69,7 +69,6 @@ target_compile_options( sbsms-convert PRIVATE ${OPTIONS} )
 target_include_directories( sbsms-convert PRIVATE ../include )
 target_link_libraries( sbsms-convert sbsmsx pthread)
 
-
 if( 0 ) # sbsms-play not included currently
 add_executable( sbsms-play src/sbsms-play.cpp src/audio.cpp )
 pkg_search_module(PORTAUDIO REQUIRED portaudio-2.0)

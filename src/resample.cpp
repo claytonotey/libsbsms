@@ -1,11 +1,11 @@
-#include "sbsms.h"
+#include <cmath>
 #include <stdlib.h>
 #include <stdio.h>
 #include <assert.h>
-#include "sincCoeffs.h"
-#include "real.h"
-#include "utils.h"
 #include <algorithm>
+#include "sbsms.h"
+#include "sincCoeffs.h"
+#include "utils.h"
 #include "buffer.h"
 using namespace std;
 
@@ -168,7 +168,7 @@ long ResamplerImp :: read(audio *audioOut, long samples)
           long nWrite = min((long)resampleChunkSize,frame.size-inOffset);
           audio *i = &(frame.buf[inOffset]);
           for(int j=0;j<nWrite;j++) {
-            int nAhead = end;
+            int nAhead = end + 1;
             out->N = nAhead;
             out->grow(nAhead);
             audio *o = &(out->buf[out->writePos+start]);
@@ -181,7 +181,7 @@ long ResamplerImp :: read(audio *audioOut, long samples)
             }
             float i0 = (*i)[0];
             float i1 = (*i)[1];
-            for(int k=start;k<end;k++) {
+            for(int k=start;k<=end;k++) {
               int k0 = (di<0)?-di:di; 
               int k1 = (di<0)?k0-1:k0+1;
               float sinc;

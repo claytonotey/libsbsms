@@ -1,5 +1,4 @@
-#include <math.h>
-#include "real.h"
+#include <cmath>
 #include "utils.h"
 #include "trackpoint.h"
 #include "track.h"

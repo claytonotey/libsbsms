@@ -2,8 +2,8 @@
 #ifndef UTILS_H
 #define UTILS_H
 
+#include <cmath>
 #include "sbsmsx.h"
-#include "real.h"
 #include "config.h"
 
 namespace _sbsmsx_ {

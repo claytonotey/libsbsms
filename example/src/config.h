@@ -20,12 +20,6 @@
 /* Define to 1 if you have the <inttypes.h> header file. */
 /* #undef HAVE_INTTYPES_H */
 
-/* Define if you have C99's lrint function. */
-/* #undef HAVE_LRINT */
-
-/* Define if you have C99's lrintf function. */
-/* #undef HAVE_LRINTF */
-
 /* Define to 1 if you have the <memory.h> header file. */
 /* #undef HAVE_MEMORY_H */
 

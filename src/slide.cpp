@@ -1,7 +1,7 @@
-#include "sbsms.h"
-#include "real.h"
-#include <math.h>
+#include <cmath>
 #include <algorithm>
+#include "sbsms.h"
+
 using namespace std;
 
 namespace _sbsms_ {

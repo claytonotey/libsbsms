@@ -1,14 +1,13 @@
+#include <stdlib.h>
+#include <cmath>
+#include <set>
 #include "sms.h"
-#include "real.h"
 #include "utils.h"
 #include "dBTable.h"
-#include <stdlib.h>
-#include <math.h>
-#include <set>
+
 using namespace std;
 
 namespace _sbsms_ {
-
 
 SMS :: SMS(SMS *lo, int N, int band, int bandMax, int h, int res, int N0, int N1, int N2, int channels, audio *peak2)
 {

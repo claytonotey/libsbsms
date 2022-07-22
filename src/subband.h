@@ -2,13 +2,13 @@
 #ifndef SUBBAND_H
 #define SUBBAND_H
 
-#include "real.h"
-#include "buffer.h"
-#include "sms.h"
+#include <cmath>
 #include <stdio.h>
 #ifdef MULTITHREADED
-#include "pthread.h"
+#include <pthread.h>
 #endif
+#include "buffer.h"
+#include "sms.h"
 
 namespace _sbsms_ {
 
