@@ -17,15 +17,6 @@ enum {
   numQualityParams = 52
 };
 
-static const SBSMSQualityParams SBSMSQualityStandard = {
-  8,3,
-  {512,512,384,384,384,384,384,384,0,0},
-  {168,144,128,96,64,36,24,14,0,0},
-  {384,288,256,168,128,84,52,28,0,0},
-  {512,448,360,288,192,128,84,44,0,0},
-  {1,1,2,1,1,2,1,1,0,0}
-};
-
 struct SBSMSQualityParams {
   int bands;
   int H;
@@ -34,6 +25,15 @@ struct SBSMSQualityParams {
   int N1[maxBands];
   int N2[maxBands];
   int res[maxBands];
+};
+
+static const SBSMSQualityParams SBSMSQualityStandard = {
+  8,3,
+  {512,512,384,384,384,384,384,384,0,0},
+  {168,144,128,96,64,36,24,14,0,0},
+  {384,288,256,168,128,84,52,28,0,0},
+  {512,448,360,288,192,128,84,44,0,0},
+  {1,1,2,1,1,2,1,1,0,0}
 };
 
 class SBSMSQuality {
