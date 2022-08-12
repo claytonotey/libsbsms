@@ -1,5 +1,16 @@
 /* src/config.h.in.  Generated from configure.ac by autoheader.  */
 
+#cmakedefine BIGENDIAN 1
+
+/* Define to use libmad */
+#cmakedefine HAVE_MAD 1
+
+/* Define to use libportaudio */
+#cmakedefine HAVE_PORTAUDIO 1
+
+/* Define to use libsndfile */
+#cmakedefine HAVE_SNDFILE 1
+
 /* Define to enable sse */
 #cmakedefine ENABLE_SSE 1
 

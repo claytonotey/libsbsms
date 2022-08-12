@@ -1,8 +1,9 @@
+#include <cmath>
+#include <algorithm>
 #include "subband.h"
-#include "real.h"
 #include "sbsms.h"
 #include "utils.h"
-#include <algorithm>
+
 using namespace std;
 
 namespace _sbsms_ {
@@ -807,7 +808,6 @@ void SubBand :: render(int c)
 {
   long ntodo = parent?1:nGrainsToRender[c];
   long ndone = 0;
-  long nRenderedTotal = 0;
 
   while(ndone<ntodo) {
     if(sub && !(nGrainsRendered[c]&resMask)) {

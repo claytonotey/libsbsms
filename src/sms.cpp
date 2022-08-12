@@ -1,10 +1,10 @@
+#include <stdlib.h>
+#include <cmath>
+#include <set>
 #include "sms.h"
-#include "real.h"
 #include "utils.h"
 #include "dBTable.h"
-#include <stdlib.h>
-#include <math.h>
-#include <set>
+
 using namespace std;
 
 namespace _sbsms_ {
@@ -1271,7 +1271,7 @@ void SMS :: start(long offset, int c)
       renderTracks[c].insert(tt0.base(),t);        
       t->bRender = true;
     }
-  }
+  } 
 #ifdef MULTITHREADED
   pthread_mutex_unlock(&trackMutex[c]);
 #endif
@@ -1435,13 +1435,9 @@ void SMS :: add(grain *g0, grain *g1, grain *g2, int c)
     mag1 = (float*)malloc((Nover2+1)*sizeof(float));
     calcmags(mag1, x10[c]);
   }
-  float mag2sum[1024];
-  memset(mag2sum,0,1024*sizeof(float));
-
   float *mag2 = this->mag2[c];
-  calcmags(mag2sum, g2->x);
-  calcmags(mag2sum, x2[c]);
   calcmags(mag2, x2[c]);
+  //calcmagsStereo(mag2, g2->x);
 #ifdef MULTITHREADED
   pthread_mutex_lock(&magMutex[c]);
 #endif
@@ -1739,7 +1735,7 @@ float SMS :: findExtremum(float *mag, float *mag2, int k, float *y)
   if(y) {
     int ki = lrintf(x);
     float kf = ki<x?x-ki:ki-x;
-    int ki1 = ki<k?ki+1:ki-1;
+    int ki1 = ki<x?ki+1:ki-1;
     *y = ((1.0f-kf)*mag2[ki] + kf*mag2[ki1]);
   }
   return x;
@@ -1748,6 +1744,14 @@ float SMS :: findExtremum(float *mag, float *mag2, int k, float *y)
 void SMS :: calcmags(float *mag, audio *x) {
   for(int k=0;k<=Nover2;k++) {
     mag[k] = norm2(x[k]);
+  }
+}
+
+void SMS :: calcmagsStereo(float *mag, audio *x) {
+  mag[0] = norm2(x[0]);
+  mag[Nover2] = norm2(x[Nover2]);
+  for(int k=1;k<Nover2;k++) {
+    mag[k] = norm2(x[k]) + norm2(x[N-k]);;
   }
 }
 

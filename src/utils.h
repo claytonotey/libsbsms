@@ -2,7 +2,7 @@
 #ifndef UTILS_H
 #define UTILS_H
 
-#include "real.h"
+#include <cmath>
 #include "sbsms.h"
 
 namespace _sbsms_ {

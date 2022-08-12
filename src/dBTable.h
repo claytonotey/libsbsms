@@ -2,7 +2,7 @@
 #ifndef DBTABLE_H
 #define DBTABLE_H
 
-#include "real.h"
+#include <cmath>
 
 namespace _sbsms_ {
 

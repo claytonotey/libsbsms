@@ -19,17 +19,6 @@ add_library(sbsms
 
 target_compile_definitions(sbsms PRIVATE CMAKE)
 
-include(CheckFunctionExists)
-check_function_exists(lrint HAVE_LRINT)
-if(HAVE_LRINT)
-  target_compile_definitions(sbsms PRIVATE HAVE_LRINT=1)
-endif()
-
-check_function_exists(lrintf HAVE_LRINTF)
-if(HAVE_LRINTF)
-  target_compile_definitions(sbsms PRIVATE HAVE_LRINTF=1)
-endif()
-
 set_target_properties(sbsms PROPERTIES
   SOVERSION ${PROJECT_VERSION_MAJOR}
   VERSION ${PROJECT_VERSION})

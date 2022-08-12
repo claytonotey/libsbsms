@@ -1,9 +1,8 @@
-#include <math.h>
+#include <cmath>
 #include <cstdlib>
 #include <cstring>
 #include "grain.h"
 #include "sbsms.h"
-#include "real.h"
 #include "utils.h"
 
 #include <map>
