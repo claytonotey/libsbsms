@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.1)
+cmake_minimum_required(VERSION 3.5)
 project(sbsms VERSION 2.3.0 LANGUAGES CXX)
 
 option(BUILD_SHARED_LIBS "Build dynamic library" ON)
